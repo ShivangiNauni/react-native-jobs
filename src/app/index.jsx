@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import exercises from "../../assets/data/exercises.json";
-import ExerciseListItem from "../../src/components/exerciseListItem";
+import ExerciseListItem from "../components/exerciseListItem";
 
 
 

@@ -1,13 +1,15 @@
-import { Text, View, StyleSheet } from "react-native";
-
+import { Text, View, StyleSheet, Pressable } from "react-native";
+import {Link} from 'expo-router'
 function ExerciseListItem({ item }) {
   return (
-    <View style={styles.exerciseContainer}>
+    <Link href={`/${item.name}`} asChild>
+    <Pressable style={styles.exerciseContainer}>
       <Text style={styles.exerciseName}>{item.name}</Text>
       <Text style={styles.exerciseSubtitle}>
         {item.muscle.toUpperCase()} | {item.equipment.toUpperCase()}
       </Text>
-    </View>
+    </Pressable>
+    </Link>
   );
 }
 
