@@ -7,6 +7,7 @@ import { useState } from "react";
 import { gql } from "graphql-request";
 import client from "../graphqlClient";
 import { useQuery } from "@tanstack/react-query";
+import NewSetInput from "../components/newSetInput";
 const exerciseQuery = gql`query exercises( $name: String){
   exercises( name: $name){
       equipment
@@ -64,6 +65,7 @@ const {data, isLoading, error} = useQuery({
           {isInstExpanded ? "See less" : "See more"}
         </Text>
       </View>
+      <NewSetInput />
     </ScrollView>
   );
 }
